@@ -2,8 +2,8 @@ import express, { NextFunction, Request, Response } from 'express';
 import { UserController } from './user.controller';
 import auth from '../../middlewares/auth';
 import { ENUM_USER_ROLE } from '../../../enums/user';
-import { FileUploadHelper } from '../../../helpers/FileUploadHelper';
 import { UserValidation } from './user.validation';
+import { FileUploadHelper } from '../../../helpers/FileUploadHelper';
 
 const router = express.Router();
 
