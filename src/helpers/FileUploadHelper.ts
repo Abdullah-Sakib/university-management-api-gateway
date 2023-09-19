@@ -22,8 +22,8 @@ const upload = multer({ storage: storage });
 
 const uploadToCloudinary = async (file: IUploadFile): Promise<ICloudinaryResponse | undefined> => {
   return new Promise((resolve, reject) => {
-    cloudinary.uploader.upload(file.path, (error: Error, result: ICloudinaryResponse) => {
-      fs.unlinkSync(file.path);
+    cloudinary.uploader.upload(file?.path, (error: Error, result: ICloudinaryResponse) => {
+      fs.unlinkSync(file?.path);
       if (error) {
         reject(error);
       } else {
