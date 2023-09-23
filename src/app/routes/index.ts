@@ -14,6 +14,9 @@ import { studentEnrolledCourseMarkRoutes } from '../modules/studentEnrolledCours
 import { studentSemesterPaymentRoutes } from '../modules/studentSemesterPayment/studentSemesterPayment.router';
 import { userRoutes } from '../modules/user/user.router';
 import { authRoutes } from '../modules/auth/auth.router';
+import { facultyRoutes } from '../modules/faculty/faculty.router';
+import { managementDepartmentRoutes } from '../modules/managementDepartment/managementDepartment.router';
+import { adminRoutes } from '../modules/admin/admin.router';
 
 const router = express.Router();
 
@@ -25,6 +28,10 @@ const moduleRoutes = [
   {
     path: '/users',
     routes: userRoutes
+  },
+  {
+    path: '/faculties',
+    routes: facultyRoutes
   },
   {
     path: '/academic-semesters',
@@ -77,6 +84,14 @@ const moduleRoutes = [
   {
     path: '/student-semester-payments',
     routes: studentSemesterPaymentRoutes
+  },
+  {
+    path: '/management-departments',
+    routes: managementDepartmentRoutes
+  },
+  {
+    path: '/admins',
+    routes: adminRoutes
   }
 ];
 
